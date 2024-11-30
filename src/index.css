@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Calendar Customizations */
+.rbc-calendar {
+  @apply font-sans;
+  min-height: 800px !important;
+  height: 100% !important;
+}
+
+.rbc-header {
+  @apply py-2 font-medium text-gray-600 bg-white border-b;
+  border-left: none;
+}
+
+.rbc-header:first-child {
+  border-left: none;
+}
+
+.rbc-month-view {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background: white;
+  height: 100% !important;
+}
+
+.rbc-month-row {
+  min-height: 120px !important;
+  border-top: 1px solid #e5e7eb;
+}
+
+.rbc-month-row:first-child {
+  border-top: none;
+}
+
+.rbc-day-bg {
+  border-left: 1px solid #e5e7eb;
+}
+
+.rbc-day-bg:first-child {
+  border-left: none;
+}
+
+/* Date cell styling */
+.rbc-date-cell {
+  padding: 4px !important;
+  text-align: right;
+  font-size: 0.875rem;
+  color: #4b5563;
+  position: relative;
+}
+
+.rbc-date-cell > a {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  z-index: 2;
+}
+
+.rbc-off-range-bg {
+  background-color: #f9fafb;
+}
+
+.rbc-off-range {
+  color: #9ca3af;
+}
+
+.rbc-today {
+  background-color: #f3f4f6;
+}
+
+/* Event styling */
+.rbc-event {
+  background-color: transparent;
+  border: none;
+  margin: 1px 4px;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  border-radius: 4px;
+  cursor: move;
+}
+
+.rbc-event-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+/* Month view specific styles */
+.rbc-month-view .rbc-month-row {
+  overflow: visible;
+}
+
+/* Row content styling */
+.rbc-row-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 24px !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.rbc-row-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.rbc-row-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.rbc-row-content::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+
+.rbc-row-content::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.rbc-row-bg {
+  display: flex;
+}
+
+.rbc-day-bg {
+  flex: 1 0;
+}
+
+/* Event container */
+.rbc-row-segment {
+  padding: 0 4px !important;
+}
+
+/* Drag and drop styles */
+.rbc-addons-dnd .rbc-event {
+  cursor: move !important;
+}
+
+.rbc-addons-dnd .rbc-event.rbc-dragging {
+  opacity: 0.5;
+}
+
+/* Fix overlapping events */
+.rbc-event-overlaps {
+  box-shadow: none;
+}
+
+/* Date range event styling */
+.date-range-event {
+  opacity: 0.9;
+}
+
+/* Multiple month view adjustments */
+.rbc-calendar.multiple-months {
+  height: 400px !important;
+  margin-bottom: 2rem;
+}
+
+.rbc-calendar.multiple-months .rbc-month-view {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Ensure events are always visible */
+.rbc-event {
+  position: relative !important;
+  width: auto !important;
+}
+
+/* Hide "show more" button */
+.rbc-show-more {
+  display: none !important;
+}
+
+/* Position the events container */
+.rbc-row-content > .rbc-row {
+  margin-right: 4px;
+}
